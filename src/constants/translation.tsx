@@ -32,6 +32,17 @@ export const translations = {
       txtmessage: "Hi Jeko, let's work together...",
       btn: "Send Message",
     },
+    projects: {
+      title: "My Projects",
+      pfweb: "Portfolio Website",
+      pftext: "A clean portfolio built with React and Tailwind CSS.",
+      pfweb1: "E-Commerce App",
+      pftext1:
+        "An online store featuring product filtration and shopping cart.",
+      pfweb2: "Task Manager",
+      pftext2: "A productivity tool that helps users organize daily tasks.",
+      view: "View Project →",
+    },
   },
   ge: {
     hero: {
@@ -64,6 +75,19 @@ export const translations = {
       message: "შეტყობინება",
       txtmessage: "გამარჯობა ჯეკო, მოდი ვითანამშრომლოთ...",
       btn: "შეტყობინების გაგზავნა",
+    },
+    projects: {
+      title: "ჩემი პროექტები",
+      pfweb: "პორტფოლიო ვებგვერდი",
+      pftext:
+        "სუფთა და მინიმალისტური პორტფოლიო, აწყობილი React-ითა და Tailwind CSS-ით.",
+      pfweb1: "ელექტრონული კომერციის აპლიკაცია",
+      pftext1:
+        "ონლაინ მაღაზია პროდუქტების ფილტრაციისა და საყიდლების კალათის ფუნქციონალით.",
+      pfweb2: "დავალებების მენეჯერი",
+      pftext2:
+        "პროდუქტიულობის ხელსაწყო, რომელიც მომხმარებლებს ყოველდღიური დავალებების ორგანიზებაში ეხმარება.",
+      view: "პროექტის ნახვა →",
     },
   },
 };

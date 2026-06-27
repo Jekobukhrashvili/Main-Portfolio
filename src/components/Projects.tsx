@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "../context/LanguageContext";
 
 interface Project {
   id: number;
@@ -7,35 +8,34 @@ interface Project {
   tags: string[];
   link: string;
 }
-
-const myProjects: Project[] = [
-  {
-    id: 1,
-    title: "Portfolio Website",
-    description: "A clean portfolio built with React and Tailwind CSS.",
-    tags: ["React", "TypeScript", "Tailwind"],
-    link: "https://github.com",
-  },
-  {
-    id: 2,
-    title: "E-Commerce App",
-    description:
-      "An online store featuring product filtration and shopping cart.",
-    tags: ["React", "JavaScript", "CSS3"],
-    link: "https://github.com",
-  },
-  {
-    id: 3,
-    title: "Task Manager",
-    description: "A productivity tool that helps users organize daily tasks.",
-    tags: ["TypeScript", "React", "HTML5"],
-    link: "https://github.com",
-  },
-];
-
 export const Projects: React.FC = () => {
   const [loadingStage, setLoadingStage] = useState(0);
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
+  const { t } = useLanguage();
+
+  const myProjects: Project[] = [
+    {
+      id: 1,
+      title: t.projects.pfweb,
+      description: t.projects.pftext,
+      tags: ["React", "TypeScript", "Tailwind"],
+      link: "https://github.com",
+    },
+    {
+      id: 2,
+      title: t.projects.pfweb1,
+      description: t.projects.pftext1,
+      tags: ["React", "JavaScript", "CSS3"],
+      link: "https://github.com",
+    },
+    {
+      id: 3,
+      title: t.projects.pfweb2,
+      description: t.projects.pftext2,
+      tags: ["TypeScript", "React", "HTML5"],
+      link: "https://github.com",
+    },
+  ];
 
   useEffect(() => {
     const stage1 = setTimeout(() => setLoadingStage(1), 300);
@@ -83,7 +83,7 @@ export const Projects: React.FC = () => {
       ) : (
         <div className="opacity-0 animate-[premiumBlurIn_0.5s_ease-out_forwards]">
           <h2 className="text-3xl font-bold text-emerald-500 dark:text-emerald-400 mb-8 transition-colors">
-            My Projects
+            {t.projects.title}
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -128,7 +128,7 @@ export const Projects: React.FC = () => {
                       rel="noopener noreferrer"
                       className="inline-block text-xs font-medium text-(--color-text-muted) hover:text-(--color-text-main) border-b border-(--color-border-custom) hover:border-(--color-text-main) transition-all duration-300 cursor-pointer"
                     >
-                      View Project →
+                      {t.projects.view}
                     </a>
                   </div>
                 </div>
