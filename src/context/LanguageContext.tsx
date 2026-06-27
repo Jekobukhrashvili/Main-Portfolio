@@ -5,7 +5,7 @@ type Language = "en" | "ge";
 
 interface LanguageContextType {
   language: Language;
-  t: typeof translations.en;
+  t: Record<string, any>;
   toggleLanguage: () => void;
 }
 
