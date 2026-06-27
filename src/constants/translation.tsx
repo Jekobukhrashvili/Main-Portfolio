@@ -2,12 +2,7 @@ export const translations = {
   en: {
     hero: {
       name: "Jeko",
-      title: "Hi, I'm",
-      button: "Explore Projects",
-      role1: "React & TypeScript Developer",
-      role2: "Problem Solver",
-      role3: "Clean Code Enthusiast",
-    },
+      title: "Hi, I'm",    },
     about: {
       title: "About Me",
       status: "Aspiring Developer",
